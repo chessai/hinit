@@ -27,8 +27,7 @@ executable hinit
   main-is:
     Main.hs
   build-depends:
-    , base ^>= 4.13
-    , optparse-applicative ^>= 0.15
+    , base >= 4.12 && < 4.15
     , neat-interpolation ^>= 0.3
     , text ^>= 1.2
     , directory ^>= 1.3
