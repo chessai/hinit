@@ -125,6 +125,7 @@ _CabalFile projName =
       Main.hs
     build-depends:
       , base >= $minBase && < $maxBase
+      , $projName
     ghc-options:
       -Wall -Werror -O2
     default-language:
