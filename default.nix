@@ -2,4 +2,8 @@
 , compiler ? "ghc865"
 }:
 
-pkgs.haskell.packages.${compiler}.callCabal2nix "hinit" ./. {}
+rec {
+  inherit pkgs;
+  hsPkgs = pkgs.haskell.packages.${compiler};
+  hinit = hsPkgs.callCabal2nix "hinit" ./. {};
+}
